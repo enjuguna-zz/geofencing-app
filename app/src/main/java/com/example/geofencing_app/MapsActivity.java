@@ -193,13 +193,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     sendNotification("Geofence", String.format(" %s You have Entered the Advertising area", key));
                     Toast.makeText(MapsActivity.this, "You have Entered the Advertising Area", Toast.LENGTH_SHORT).show();
                 }
-
+                    //When the user exits the Advertised area
                 @Override
                 public void onKeyExited(String key) {
                     sendNotification("Geofence", String.format(" %s You have Left the Advertising area", key));
                     Toast.makeText(MapsActivity.this, "You have left the Advertising Area", Toast.LENGTH_SHORT).show();
                 }
-
+                    //When the user is within the advertised area
                 @Override
                 public void onKeyMoved(String key, GeoLocation location) {
                   //  sendNotification("Geofence", String.format(" %s You are moving within Advertising area", key));
